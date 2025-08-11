@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Ankush Verma — Full‑Stack Portfolio</title>
+  <meta name="description" content="Ankush Verma — Full stack developer: HTML, CSS, JS, React, Java, SQL, MongoDB, system design." />
+  <style>
+    :root{--bg:#0f1724;--card:#0b1220;--muted:#9aa4b2;--accent:#06b6d4;--glass:rgba(255,255,255,0.04)}
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,'Segoe UI',Roboto,'Helvetica Neue',Arial;background:linear-gradient(180deg,#071028 0%,#081229 60%);color:#e6eef6}
+    .container{max-width:1100px;margin:32px auto;padding:24px}
+
+    header{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .avatar{width:56px;height:56px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:700}
+    h1{margin:0;font-size:1.25rem}
+    .sub{color:var(--muted);font-size:0.9rem}
+
+    nav a{color:var(--muted);text-decoration:none;margin-left:16px;font-weight:600}
+    nav a:hover{color:var(--accent)}
+
+    .hero{display:grid;grid-template-columns:1fr 360px;gap:28px;align-items:center;margin-top:28px}
+    .card{background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);padding:20px;border-radius:12px;box-shadow:0 6px 20px rgba(2,6,23,0.6);border:1px solid rgba(255,255,255,0.03)}
+    .lead{font-size:1.9rem;margin:0 0 8px 0}
+    .lead small{display:block;font-size:0.85rem;color:var(--muted);margin-top:6px}
+
+    .skills{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
+    .skill{background:var(--glass);padding:8px 10px;border-radius:999px;font-weight:600;font-size:0.85rem;color:var(--muted)}
+
+    .profile-meta{display:flex;flex-direction:column;gap:10px}
+    .meta-row{display:flex;align-items:center;justify-content:space-between}
+
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:22px}
+    .proj{padding:16px;border-radius:10px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border:1px solid rgba(255,255,255,0.03)}
+    .proj h3{margin:0 0 8px 0}
+    .proj p{color:var(--muted);margin:0 0 12px 0;font-size:0.95rem}
+    .btn{display:inline-block;padding:8px 12px;border-radius:8px;text-decoration:none;font-weight:700}
+    .btn-primary{background:var(--accent);color:#07202a}
+    .btn-ghost{border:1px solid rgba(255,255,255,0.06);color:var(--muted);background:transparent}
+
+    footer{margin-top:36px;color:var(--muted);font-size:0.9rem;text-align:center}
+
+    /* responsive */
+    @media (max-width:880px){
+      .hero{grid-template-columns:1fr;}
+      .projects{grid-template-columns:1fr}
+      nav a{margin-left:10px}
+    }
+
+    /* small utilities */
+    .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.03),transparent);margin:20px 0;border-radius:4px}
+    .tags{display:flex;flex-wrap:wrap;gap:8px}
+    input,textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.04);background:transparent;color:inherit}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="avatar">AV</div>
+        <div>
+          <h1>Ankush Verma</h1>
+          <div class="sub">Full‑Stack Developer — Java • React • Node • SQL • MongoDB • System Design</div>
+        </div>
+      </div>
+      <nav>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="card">
+        <p class="lead">Hi, I'm <strong>Ankush Verma</strong> — building performant web apps and scalable backends. <small>I enjoy system design, clean code, and solving hard problems.</small></p>
+
+        <div id="about" class="divider"></div>
+
+        <div class="profile-meta">
+          <div>
+            <h3>What I do</h3>
+            <p class="sub">End-to-end web applications: frontend (React), backend (Java/Node), databases (MySQL/MongoDB), and system design for production.</p>
+          </div>
+
+          <div>
+            <h3 id="skills">Tech stack</h3>
+            <div class="skills">
+              <span class="skill">HTML</span>
+              <span class="skill">CSS</span>
+              <span class="skill">JavaScript</span>
+              <span class="skill">React</span>
+              <span class="skill">Java</span>
+              <span class="skill">Spring Boot</span>
+              <span class="skill">Node.js</span>
+              <span class="skill">SQL</span>
+              <span class="skill">MongoDB</span>
+              <span class="skill">System Design</span>
+            </div>
+          </div>
+
+          <div>
+            <a class="btn btn-primary" href="#contact">Hire / Contact</a>
+            <a class="btn btn-ghost" href="#projects" style="margin-left:10px">View projects</a>
+          </div>
+        </div>
+      </div>
+
+      <aside class="card" aria-label="Quick stats">
+        <h3>Quick stats</h3>
+        <div class="meta-row"><div class="sub">Years coding</div><div><strong>4+</strong></div></div>
+        <div class="meta-row"><div class="sub">Languages</div><div><strong>Java, JS, SQL</strong></div></div>
+        <div class="meta-row"><div class="sub">Open to</div><div><strong>Freelance / Full‑time</strong></div></div>
+
+        <div style="margin-top:12px">
+          <h4>Availability</h4>
+          <p class="sub">Open to remote opportunities. Quick to onboard and deliver MVPs.</p>
+        </div>
+      </aside>
+    </section>
+
+    <section id="projects" class="projects">
+      <div class="proj card">
+        <h3>Shadowchat — Secure Chat UI</h3>
+        <p>React chat app with swipe gestures, secret chats, and device trust. Built UI and client logic (no backend in this demo).</p>
+        <div class="tags"><small class="sub">React • CSS • Frontend</small></div>
+        <div style="margin-top:10px">
+          <a class="btn btn-ghost" href="#">Live</a>
+          <a class="btn btn-primary" href="#" style="margin-left:8px">Code</a>
+        </div>
+      </div>
+
+      <div class="proj card">
+        <h3>Crispy Crave — E‑commerce Frontend</h3>
+        <p>Tailwind + JS frontend for a food-ordering site with animated transitions, cart flow, and coupon logic.</p>
+        <div class="tags"><small class="sub">HTML • Tailwind • JS</small></div>
+        <div style="margin-top:10px">
+          <a class="btn btn-ghost" href="#">Live</a>
+          <a class="btn btn-primary" href="#" style="margin-left:8px">Code</a>
+        </div>
+      </div>
+
+      <div class="proj card">
+        <h3>Network Request Analyzer</h3>
+        <p>React + proxy-based tool to craft HTTP requests with custom headers and multipart/form-data, including CORS-aware flows.</p>
+        <div class="tags"><small class="sub">React • Node • Networking</small></div>
+        <div style="margin-top:10px">
+          <a class="btn btn-ghost" href="#">Demo</a>
+          <a class="btn btn-primary" href="#" style="margin-left:8px">Code</a>
+        </div>
+      </div>
+
+      <div class="proj card">
+        <h3>Netflix‑like Demo</h3>
+        <p>Polished React demo with authentication gating and protected content preview; focus on animation and secure routing.</p>
+        <div class="tags"><small class="sub">React • Auth • UI</small></div>
+        <div style="margin-top:10px">
+          <a class="btn btn-ghost" href="#">Preview</a>
+          <a class="btn btn-primary" href="#" style="margin-left:8px">Code</a>
+        </div>
+      </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <section id="contact" class="card">
+      <h3>Contact</h3>
+      <p class="sub">Want to work together or see specific code? Drop a message — I'll reply fast.</p>
+      <form onsubmit="handleContact(event)">
+        <label>Name</label>
+        <input id="name" placeholder="Your name" required />
+        <label style="margin-top:8px">Message</label>
+        <textarea id="message" rows="4" placeholder="Short description" required></textarea>
+        <div style="margin-top:10px;display:flex;gap:10px;align-items:center">
+          <button class="btn btn-primary" type="submit">Send</button>
+          <a class="btn btn-ghost" href="mailto:ankush.verma@example.com">Email me</a>
+        </div>
+      </form>
+    </section>
+
+    <footer>
+      © <strong>Ankush Verma</strong> — Built with HTML, CSS & JavaScript. Want a React version or deploy-ready repo? Tell me which and I’ll generate it.
+    </footer>
+  </div>
+
+  <script>
+    function handleContact(e){
+      e.preventDefault();
+      const name=document.getElementById('name').value.trim();
+      const msg=document.getElementById('message').value.trim();
+      if(!name||!msg){alert('Please enter name and message');return}
+      const subject=encodeURIComponent('Portfolio contact from '+name);
+      const body=encodeURIComponent(msg+'\n\n— '+name);
+      // open mail client as fallback; developer can replace with API endpoint
+      window.location.href = 'mailto:ankush.verma@example.com?subject='+subject+'&body='+body;
+    }
+  </script>
+</body>
+</html>
